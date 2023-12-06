@@ -1,0 +1,17 @@
+{
+    "hi" :  {
+                "french" : "salut"
+            },
+
+    "hello" :  {
+        "french" : "bonjour"
+    },
+
+    "how are you" :  {
+        "french" : "Ça va"
+    },
+
+    "how" : {
+        "french" : "comment"
+    }
+}
