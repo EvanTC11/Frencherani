@@ -1,17 +1,23 @@
 {
-    "hi" :  {
+    "words" : [
+            {
+                "english" : ["hi"],
                 "french" : "salut"
             },
 
-    "hello" :  {
-        "french" : "bonjour"
-    },
+            {
+                "english" : ["hello"],
+                "french" : "bonjour"
+            },
+            
+            {
+                "english" : ["how are you"],
+                "french" : "Ça va?"
+            },
 
-    "how are you" :  {
-        "french" : "Ça va"
-    },
-
-    "how" : {
-        "french" : "comment"
-    }
+            {
+                "english" : ["how", "when"],
+                "french" : "comment"
+            }
+]
 }
