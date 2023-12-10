@@ -16,7 +16,7 @@ class Translator:
     def __GetFrench(self):
         for word in self.wordsArray:
             if self.userInput in word.getEnglish():
-                return word .getFrench()
+                return word.getFrench()
     def __FrencheraniLoop(self):
         for i in range(2):
             print(f"frencherani est working{self.text}")
