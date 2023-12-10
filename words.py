@@ -1,17 +1,21 @@
-import Word as w
+import json
+import word
 
-salut = w.Word(["hi"], "salut")
-bonjour = w.Word(["hello"], "bonjour")
-cava = w.Word(["how are you"], "Ça va")
-comment = w.Word(["how", "when"], "comment")
+class Words:
+    def __init__(self, filepath="words.json"):
+        self.words = []
+        self.filePath = filepath
 
-words = [salut, bonjour, cava, comment]
+    def load(self):
+        with open(self.filePath, "r") as self.file: self.roomsDic = json.load(self.file)
+        self.key = self.roomsDic["words"]
+        for i in range(len(self.key)):
+            self.loopKey = self.key[i]
+            self.words.append(word.Word(self.loopKey["english"], self.loopKey["french"]))
 
-def CheckForWord(word : str):
-    for i in range(len(words)):
-        for x in range(len(words[i].getEnglish())): 
-            comparingWord = words[i].getEnglish()[x]
-            
-            if comparingWord == word:   return True
-        
-    return False
+    def checkForWord(self, wordToCheck : str):
+        for i in range(len(self.words)):
+            wordsArray = self.words[i].getEnglish()
+            if wordToCheck in wordsArray:   return True
+
+        return False
