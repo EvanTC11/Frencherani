@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Frencherani - {% block title %}{% endblock title %}
+        </title>
+        <h1>
+            Frencherani
+        </h1>
+        {% include("_navigation.html") %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+        <section>
+            <header>
+                {% block header %}{% endblock header %}
+            </header>
+            <main>
+                {% block content %}<p> No messages.</p>{% endblock content %}
+            </main>
+        </section>
+    </head>
+</html>

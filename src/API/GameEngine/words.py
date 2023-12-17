@@ -16,6 +16,7 @@ class Words:
     def checkForWord(self, wordToCheck : str):
         for i in range(len(self.words)):
             wordsArray = self.words[i].getEnglish()
-            if wordToCheck in wordsArray:   return True
+            for x in range(len(wordsArray)):
+                if wordToCheck in wordsArray[x].lower():   return True
 
         return False
